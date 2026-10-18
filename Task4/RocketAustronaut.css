@@ -1,0 +1,343 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #080b1b;
+    color: white;
+}
+
+.navbar {
+    background-color: #0b1026;
+    padding: 18px 0;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: #d5d8eb;
+    margin-left: 18px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #70e1ff;
+    transform: translateY(-3px);
+}
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, #080b1b, #171b45);
+    padding: 60px 0;
+}
+
+.subtitle {
+    color: #70e1ff;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 5vw, 68px);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+    color: #70e1ff;
+}
+
+.description {
+    max-width: 480px;
+    color: #c3c8df;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.explore-btn {
+    background-color: #70e1ff;
+    color: #080b1b;
+    padding: 13px 28px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                background-color 0.3s ease;
+}
+
+.explore-btn:hover {
+    background-color: white;
+    color: #080b1b;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px #70e1ff55;
+}
+
+.space-visual {
+    position: relative;
+    height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.planet {
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #5c6cff, #9a5cff, #202c70);
+    box-shadow: 0 0 60px #786cff66;
+    animation: planetGlow 4s ease-in-out infinite alternate;
+}
+
+.astronaut {
+    position: absolute;
+    font-size: 85px;
+    z-index: 2;
+    animation: astronautFloat 3s ease-in-out infinite;
+}
+
+.rocket {
+    position: absolute;
+    font-size: 60px;
+    z-index: 3;
+    top: 40px;
+    right: 12%;
+    transform: rotate(-25deg);
+    animation: rocketFly 4s ease-in-out infinite;
+}
+
+.stars {
+    position: absolute;
+    color: #70e1ff;
+    font-size: 30px;
+    animation: twinkle 2s ease-in-out infinite alternate;
+}
+
+.star-one {
+    top: 40px;
+    left: 12%;
+}
+
+.star-two {
+    top: 100px;
+    right: 10%;
+    animation-delay: 0.5s;
+}
+
+.star-three {
+    bottom: 55px;
+    left: 15%;
+    animation-delay: 1s;
+}
+
+.star-four {
+    bottom: 75px;
+    right: 20%;
+    animation-delay: 0.8s;
+}
+
+@keyframes astronautFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(-8deg);
+    }
+
+    50% {
+        transform: translateY(-25px) rotate(8deg);
+    }
+}
+
+@keyframes rocketFly {
+    0%, 100% {
+        transform: translate(0, 0) rotate(-25deg);
+    }
+
+    50% {
+        transform: translate(-15px, -25px) rotate(-15deg);
+    }
+}
+
+@keyframes planetGlow {
+    from {
+        box-shadow: 0 0 35px #786cff55;
+    }
+
+    to {
+        box-shadow: 0 0 80px #786cff99;
+    }
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+.missions {
+    background-color: #0b1026;
+}
+
+.missions h2,
+.about-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.section-description {
+    color: #c3c8df;
+    margin-top: 12px;
+}
+
+.mission-card {
+    height: 100%;
+    padding: 30px 25px;
+    border: 1px solid #292f56;
+    border-radius: 18px;
+    background: #121936;
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.mission-card:hover {
+    transform: translateY(-10px);
+    border-color: #70e1ff;
+    box-shadow: 0 12px 30px #00000044;
+}
+
+.card-icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.mission-card h3 {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.mission-card p {
+    color: #c3c8df;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+.about-section {
+    background: linear-gradient(135deg, #171b45, #080b1b);
+}
+
+.about-section p {
+    max-width: 650px;
+    margin: 20px auto 0;
+    color: #c3c8df;
+    line-height: 1.8;
+}
+
+footer {
+    background-color: #050714;
+    color: #aeb4d0;
+    text-align: center;
+    padding: 22px 10px;
+}
+
+footer p {
+    margin: 0;
+}
+@media (max-width: 991px) {
+    .hero {
+        text-align: center;
+    }
+
+    .hero-content {
+        margin-bottom: 20px;
+    }
+
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .space-visual {
+        height: 350px;
+    }
+
+    .nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        padding: 45px 0 20px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+
+    .space-visual {
+        height: 290px;
+    }
+
+    .planet {
+        width: 190px;
+        height: 190px;
+    }
+
+    .astronaut {
+        font-size: 65px;
+    }
+
+    .rocket {
+        font-size: 45px;
+        right: 8%;
+        top: 25px;
+    }
+
+    .missions h2,
+    .about-section h2 {
+        font-size: 29px;
+    }
+
+    .mission-card {
+        padding: 25px 20px;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
